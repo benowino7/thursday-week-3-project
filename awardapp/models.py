@@ -5,7 +5,6 @@ from url_or_relative_url_field.fields import URLOrRelativeURLField
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.core.validators import MaxValueValidator
-# Create your models here.
 
 
 class Profile(models.Model):

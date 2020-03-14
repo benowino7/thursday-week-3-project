@@ -1,6 +1,5 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
-from django.shortcuts import render,redirect
 from django.http import Http404
 from .models import Profile,Project,Rate,Comments
 from django.contrib.auth.decorators import login_required
@@ -12,9 +11,6 @@ from rest_framework import status
 from .serializer import ProfileSerializer,ProjectSerializer
 from rest_framework.response import Response
 
-
-
-# Create your views here.
 
 def home(request):
     projects = Project.objects.all()
@@ -178,36 +174,6 @@ class ProfileList(APIView):
     
     def post(self, request, format=None):
         serializers = ProfileSerializer(data=request.data)
-        if serializers.is_valid():
-            serializers.save()
-            return Response(serializers.data, status=status.HTTP_201_CREATED)
-        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-
-class ProfileList(APIView):
-    permission_classes = (IsAdminOrReadOnly,)
-    def get(self,request,format=None):
-        all_profiles = Profile.objects.all()
-        serializers = ProfileSerializer(all_profiles,many=True)
-        return Response(serializers.data)
-    
-    def post(self, request, format=None):
-        serializers = ProfileSerializer(data=request.data)
-        if serializers.is_valid():
-            serializers.save()
-            return Response(serializers.data, status=status.HTTP_201_CREATED)
-        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
-
-class ProjectList(APIView):
-    permission_classes = (IsAdminOrReadOnly,)
-    def get(self,request,format=None):
-        all_projects = Project.objects.all()
-        serializers = ProjectSerializer(all_projects,many=True)
-        return Response(serializers.data)
-    
-    def post(self, request, format=None):
-        serializers = ProjectSerializer(data=request.data)
         if serializers.is_valid():
             serializers.save()
             return Response(serializers.data, status=status.HTTP_201_CREATED)
