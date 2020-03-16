@@ -1,18 +1,18 @@
-# BenJail instagram Sample #
+# BenJail Award Sample #
 
-![BenJail instagram Sample Version](https://img.shields.io/badge/Version-0.0.4-green.svg)
+![BenJail award Sample Version](https://img.shields.io/badge/Version-0.0.4-green.svg)
 
 ## Summary
 
-This sample contains a Django 2.0.x Instagram Site. The  images are optimized for performance. The Django instagram Sample is responsive and mobile/device friendly.
+This sample contains a Django 2.0.x award Site. The  images are optimized for performance. The Django award Sample is responsive and mobile/device friendly.
 
-![Django instagram Sample](./staticfiles/home.png)
+![Django award Sample](./media/landing/home.png)
 
 ### Create a profile from the Django admin panel
 
-Albums can be created from the Django admin panel where one zip file with all the images should be selected from the PC. The Django instagram will resize the images to improve the picute load times and will also create thumbnail for every image in the zip.
+Albums can be created from the Django admin panel where one zip file with all the images should be selected from the PC. The Django award will resize the images to improve the picute load times and will also create thumbnail for every image in the zip.
 
-![Django instagram Sample](./staticfiles/admin.png)
+![Django award Sample](./media/landing/admin.png)
 
 
 ## Tested with Django / Python
@@ -36,7 +36,7 @@ Albums can be created from the Django admin panel where one zip file with all th
 
 Solution|Author(s)
 --------|---------
-BenJail instagram | Benson owino ([@benson](https://twitter.com/Ben58886580))
+BenJail award | Benson owino ([@benson](https://twitter.com/Ben58886580))
 
 ## Version history
 
@@ -55,13 +55,13 @@ Version|Date|Comments
 - Open the command line, navigate to the django app folder and execute:
     - `virtualenv env` (requires virtualenv), Mac `virtualenv yourenv -p python3.6`
     - Linux: `source env/bin/activate`, Windows: `call env/Scripts/activate.bat`, Mac `source env/bin/activate`
-    - navigate to the `django_instagram` folder using `cd django_instagram`
+    - navigate to the `django_award` folder using `cd django_award`
     - execute `pip install -r requirements.txt` or `pip3 install -r requirements.txt` depending on your python installation. 
     - If the Pillow fail to install on Windows, then install it manually `pip install ../whl/Pillow-5.0.0-cp36-none-win32.whl` (if you are not using python 3.6 32 bit then  [download the Pillow wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow) for your python version).
     - Run `python manage.py migrate` or `python3 manage.py migrate`
     - Run `python manage.py runserver` or `python3 manage.py runserver` depending on your python installation
-    - Open http://127.0.0.1:8000/ in web browser.
-    - To access the admin forms go to http://127.0.0.1:8000/admin/ and enter user: benowino7, password: benjil100
+    - Open https://thawing-plateau-18765.herokuapp.com in web browser.
+    - To access the admin forms go to https://thawing-plateau-18765.herokuapp.com/admin/ and enter user: benowino7, password: benjil100
 
 ## Features
 
@@ -69,10 +69,10 @@ This Sample illustrates the following concepts on top of the Django Framework:
 
 - Using django-material and materializecss for building Django UI.
 - Using django-imagekit for building resizing images.
-- Using photoswipe javascript library for more rich instagram user experience.
+- Using photoswipe javascript library for more rich award user experience.
 
 ## Control the image size and quality
-The picture size and quality can be controlled programatically from the models.py. Just change the processors. For more information see [django-imagekit](https://github.com/benowino7/instaclone).
+The picture size and quality can be controlled programatically from the models.py. Just change the processors. For more information see [django-imagekit](https://github.com/benowino7/thursday-week-3-project).
 
 ```python
 class AlbumImage(models.Model):
