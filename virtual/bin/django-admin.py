@@ -1,4 +1,4 @@
-#!/home/fanny/Desktop/award/virtual/bin/python
+#!/home/moringaschool/Documents/projects/django/award/virtual/bin/python3.6
 from django.core import management
 
 if __name__ == "__main__":
