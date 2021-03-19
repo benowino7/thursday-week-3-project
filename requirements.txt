@@ -13,7 +13,7 @@ django-material==1.4.3
 django-registration==2.4.1
 django-tinymce==2.8.0
 django-url-or-relative-url-field==0.1.2
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 gunicorn==19.9.0
 Pillow==6.2.1
 psycopg2==2.8.4
